@@ -10,7 +10,7 @@ const Register = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', {
+      const res = await axios.post('https://intellmeet-backend-gs65.onrender.com/api/auth/register', {
         name,
         email,
         password

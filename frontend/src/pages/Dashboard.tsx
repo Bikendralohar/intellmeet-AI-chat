@@ -17,7 +17,7 @@ const Dashboard = ({ onJoinMeeting }: { onJoinMeeting: (code: string, name: stri
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/auth/profile', {
+      const res = await axios.get('https://intellmeet-backend-gs65.onrender.com/api/auth/profile', {
         headers: { Authorization: `Bearer ${token}` }
       })
       setUser(res.data)
@@ -28,7 +28,7 @@ const Dashboard = ({ onJoinMeeting }: { onJoinMeeting: (code: string, name: stri
 
   const fetchMeetings = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/meetings', {
+      const res = await axios.get('https://intellmeet-backend-gs65.onrender.com/api/meetings', {
         headers: { Authorization: `Bearer ${token}` }
       })
       setMeetings(res.data)
@@ -39,7 +39,7 @@ const Dashboard = ({ onJoinMeeting }: { onJoinMeeting: (code: string, name: stri
 
   const createMeeting = async () => {
     try {
-      await axios.post('http://localhost:5000/api/meetings',
+      await axios.post('https://intellmeet-backend-gs65.onrender.com/api/meetings',
         { title },
         { headers: { Authorization: `Bearer ${token}` } }
       )
